@@ -32,3 +32,5 @@ I'm a BTech student specializing in Artificial Intelligence and Robotics. I love
 ---
 
 > “go gently, you're still becoming.” 🕊
+
+https://ipshitabhardwaj.github.io/Portfolio
