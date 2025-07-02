@@ -159,6 +159,37 @@ footer {
   }
 }
 
+/* 🌸 Education Section */
+#education {
+  padding: 4rem 2rem;
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
+}
+#education h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #6b5241;
+}
+.edu-block {
+  background-color: #fffdf9;
+  border: 1px solid #e9ded2;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+}
+.edu-block h3 {
+  color: #a2836e;
+  margin-bottom: 0.3rem;
+}
+.edu-block p {
+  margin: 0.4rem 0;
+}
+.edu-note {
+  font-style: italic;
+  color: #7a6658;
+}
+
 body.dark {
   background-color: #2e2721;
   color: #f6eee4;
@@ -182,4 +213,11 @@ body.dark .divider {
 }
 body.dark .divider.reverse {
   background-color: #6c5849;
+}
+body.dark .edu-block {
+  background-color: #3b312a;
+  border-color: #5c4a3d;
+}
+body.dark .edu-note {
+  color: #cdb8a4;
 }
