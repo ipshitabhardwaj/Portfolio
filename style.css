@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Quicksand', sans-serif;
   line-height: 1.7;
@@ -34,9 +38,24 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 nav ul li a {
   font-weight: 600;
+  position: relative;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #c4a484;
+  transition: width 0.3s ease;
+}
+nav ul li a:hover::after {
+  width: 100%;
 }
 
 section {
@@ -50,6 +69,14 @@ section h2 {
   margin-bottom: 1rem;
   color: #6b5241;
 }
+@media (max-width: 600px) {
+  section {
+    padding: 3rem 1rem;
+  }
+  section h2 {
+    font-size: 1.5rem;
+  }
+}
 
 #hero h2 span {
   color: #c4a484;
@@ -60,9 +87,14 @@ section h2 {
 }
 
 .projects-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .project-card {
   border: 1px solid #e9ded2;
@@ -83,6 +115,18 @@ section h2 {
 
 #contact p {
   margin: 0.75rem 0;
+}
+.email-box {
+  display: inline-block;
+  background: #fffdf9;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #e9ded2;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+body.dark .email-box {
+  background: #3b312a;
+  border-color: #5c4a3d;
 }
 
 footer {
@@ -188,6 +232,11 @@ footer {
 .edu-note {
   font-style: italic;
   color: #7a6658;
+}
+@media (max-width: 600px) {
+  .edu-block {
+    padding: 1.2rem;
+  }
 }
 
 body.dark {
