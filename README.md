@@ -17,7 +17,6 @@ I'm a BTech student specializing in Artificial Intelligence and Robotics. I love
 - Theme toggle (light/dark)
 - Gentle preloader
 - Random affirmations
-- Torn-paper dividers
 - Fully responsive design
 
 ## 📬 Live Preview
