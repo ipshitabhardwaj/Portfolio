@@ -9,15 +9,21 @@
 </head>
 <body>
 
+  <!-- Custom Cursor -->
+  <div class="custom-cursor">🤎</div>
+
   <!-- Preloader -->
   <div id="preloader">
     <div class="loader-text">setting up a safe space...<span class="dots"></span></div>
   </div>
 
-  <!-- Toggle Theme Button -->
+  <!-- Theme Toggle -->
   <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
 
-  <!-- Floating sparkles -->
+  <!-- Scroll to Top -->
+  <button id="scrollToTop" aria-label="Scroll to top">↑</button>
+
+  <!-- Sparkles -->
   <div class="sparkle-container"></div>
 
   <header>
@@ -38,7 +44,7 @@
     <p>learning to build things that are both helpful and feel good to use ☕</p>
   </section>
 
-  <div class="divider"></div>
+  <div class="divider"><span>☕</span></div>
 
   <section id="about">
     <h2>about me</h2>
@@ -54,22 +60,21 @@
     <p>Thanks for visiting!</p>
   </section>
 
-  <div class="divider reverse"></div>
+  <div class="divider"><span>🎓</span></div>
 
   <section id="education">
-  <h2>education</h2>
-  <div class="edu-block">
-    <h3>🎓 BTech in Artificial Intelligence & Robotics</h3>
-    <p>Chandigarh Engineering College, CGC Landran</p>
-    <p>2024 – 2028</p>
-    <p class="edu-note">
-      building a strong foundation in ai, robotics, and computer science — with an interest in creating tech that’s thoughtful, useful, and kind to interact with.
-    </p>
-  </div>
-</section>
+    <h2>education</h2>
+    <div class="edu-block">
+      <h3>🎓 BTech in Artificial Intelligence & Robotics</h3>
+      <p>Chandigarh Engineering College, CGC Landran</p>
+      <p>2024 – 2028</p>
+      <p class="edu-note">
+        building a strong foundation in ai, robotics, and computer science — with an interest in creating tech that’s thoughtful, useful, and kind to interact with.
+      </p>
+    </div>
+  </section>
 
-<div class="divider reverse"></div>
-
+  <div class="divider"><span>🧩</span></div>
 
   <section id="projects">
     <h2>projects</h2>
@@ -93,16 +98,17 @@
     </div>
   </section>
 
-  <div class="divider reverse"></div>
+  <div class="divider"><span>💌</span></div>
 
   <section id="quotes">
     <h2>gentle reminder 💌</h2>
     <div class="quote-box" id="quote-box">
-      <!-- the quote will be inserted here -->
+      <!-- quote will go here -->
     </div>
+    <button id="next-quote">next quote ↻</button>
   </section>
 
-  <div class="divider reverse"></div>
+  <div class="divider"><span>📫</span></div>
 
   <section id="contact">
     <h2>find me</h2>
@@ -110,13 +116,13 @@
     <p>🔗 <a href="https://www.linkedin.com/in/ipshita-bhardwaj/" target="_blank">LinkedIn</a></p>
     <p>💻 <a href="https://github.com/ipshitabhardwaj" target="_blank">GitHub</a></p>
     <p>✍️ <a href="https://medium.com/@ipshitabhardwaj" target="_blank">Medium</a></p>
+    <a class="resume-button" href="resume.pdf" target="_blank" title="Resume">📎 resume</a>
   </section>
 
- <footer>
-  <p>from my cozy corner to yours · © 2025 Ipshita Bhardwaj</p>
-  <p style="font-style: italic; opacity: 0.6; font-size: 0.85rem;">this site is a little space i'm still growing into — thanks for stopping by 🤍</p>
-</footer>
-
+  <footer>
+    <p>from my cozy corner to yours · © 2025 Ipshita Bhardwaj</p>
+    <p class="built-note">built with HTML, CSS, JS — and lots of gentle magic 🤍</p>
+  </footer>
 
   <script src="sparkles.js"></script>
 </body>
