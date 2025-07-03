@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none; /* hide default cursor */
 }
 
 html {
@@ -14,7 +15,8 @@ body {
   background-color: #fdf6ee;
   color: #4b3d33;
   transition: background-color 0.4s, color 0.4s;
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
+  overflow-x: hidden;
 }
 
 a {
@@ -63,6 +65,13 @@ section {
   max-width: 750px;
   margin: auto;
   text-align: center;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 section h2 {
   font-size: 2rem;
@@ -102,6 +111,11 @@ section h2 {
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.07);
 }
 .project-card h3 {
   margin-bottom: 0.5rem;
@@ -113,27 +127,53 @@ section h2 {
   font-style: italic;
 }
 
+#next-quote {
+  margin-top: 1rem;
+  padding: 0.4rem 1rem;
+  background-color: #f4e8da;
+  border: none;
+  border-radius: 8px;
+  color: #6b5241;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+#next-quote:hover {
+  background-color: #e2d1be;
+}
+
 #contact p {
   margin: 0.75rem 0;
 }
-.email-box {
+
+.resume-button {
   display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.5rem 1.2rem;
   background: #fffdf9;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  border: 1px solid #e9ded2;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  border: 1px solid #cbb5a0;
+  border-radius: 30px;
+  color: #6b5241;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
-body.dark .email-box {
-  background: #3b312a;
-  border-color: #5c4a3d;
+.resume-button:hover {
+  background: #f2e3d3;
+  transform: translateY(-2px);
 }
 
 footer {
   text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  opacity: 0.7;
+  padding: 2rem 1rem 4rem;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+.built-note {
+  margin-top: 0.4rem;
+  font-style: italic;
+  font-size: 0.85rem;
+  opacity: 0.6;
 }
 
 #theme-toggle {
@@ -147,6 +187,7 @@ footer {
   font-size: 1.2rem;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 99;
 }
 
 #preloader {
@@ -156,7 +197,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 99;
+  z-index: 1000;
 }
 .loader-text {
   font-size: 1.1rem;
@@ -173,48 +214,31 @@ footer {
   100% { content: '...'; }
 }
 
-/* ✨ New Divider Style */
 .divider {
   height: 2px;
   background-color: #e6d8c9;
-  margin: 3rem auto;
+  margin: 3rem auto 2.5rem;
   max-width: 80%;
   border-radius: 2px;
+  position: relative;
 }
-.divider.reverse {
-  background-color: #d1c0b0;
-}
-
-.sparkle {
-  position: fixed;
-  width: 6px;
-  height: 6px;
-  background: #e0c8b0;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 1000;
-  opacity: 0.8;
-  animation: sparkleFade 1.2s forwards ease-out;
-}
-@keyframes sparkleFade {
-  to {
-    transform: translateY(-30px) scale(0.5);
-    opacity: 0;
-  }
+.divider span {
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fdf6ee;
+  padding: 0 0.6rem;
+  font-size: 1.2rem;
 }
 
-/* 🌸 Education Section */
-#education {
-  padding: 4rem 2rem;
-  max-width: 750px;
-  margin: auto;
-  text-align: center;
+body.dark .divider {
+  background-color: #4e3d30;
 }
-#education h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #6b5241;
+body.dark .divider span {
+  background-color: #2e2721;
 }
+
 .edu-block {
   background-color: #fffdf9;
   border: 1px solid #e9ded2;
@@ -257,16 +281,64 @@ body.dark #theme-toggle {
 body.dark #preloader {
   background: #2e2721;
 }
-body.dark .divider {
-  background-color: #4e3d30;
-}
-body.dark .divider.reverse {
-  background-color: #6c5849;
-}
 body.dark .edu-block {
   background-color: #3b312a;
   border-color: #5c4a3d;
 }
 body.dark .edu-note {
   color: #cdb8a4;
+}
+body.dark .resume-button {
+  background: #3b312a;
+  border-color: #5c4a3d;
+  color: #f6eee4;
+}
+body.dark .resume-button:hover {
+  background: #4e3d30;
+}
+
+/* Scroll-To-Top Button */
+#scrollToTop {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 4.5rem; /* moved it slightly left from the toggle */
+  background-color: #f4e8da;
+  color: #6b5241;
+  border: none;
+  border-radius: 50%;
+  padding: 0.6rem 0.75rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 98; /* slightly lower than theme toggle */
+}
+
+#scrollToTop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body.dark #scrollToTop {
+  background-color: #4e3d30;
+  color: #f6eee4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  font-size: 1.2rem;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s ease;
+}
+body.dark .custom-cursor {
+  content: '🤍';
 }
