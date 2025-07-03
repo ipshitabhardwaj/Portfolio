@@ -108,3 +108,10 @@ function updateCursor() {
     cursor.textContent = "🤎";
   }
 }
+// 🍔 Mobile nav toggle logic
+const navToggle = document.getElementById("nav-toggle");
+const navList = document.querySelector("nav ul");
+
+navToggle.addEventListener("click", () => {
+  navList.classList.toggle("show-nav");
+});
