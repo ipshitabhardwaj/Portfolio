@@ -153,7 +153,9 @@ section h2 {
   gap: 0.6rem;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 0 1rem;
 }
+
 .filter-btn {
   padding: 0.4rem 0.9rem;
   font-size: 0.9rem;
