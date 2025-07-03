@@ -62,44 +62,28 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* Mobile Nav Toggle */
-#nav-toggle {
-  display: none;
-  position: fixed;
-  top: 1.5rem;
-  right: 1.5rem;
-  font-size: 1.5rem;
-  background: #fff3e6;
-  color: #6b5241;
+/* Navigation (works same on all screen sizes now) */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  background: none;
+  padding: 0;
+  position: static;
   border: none;
-  border-radius: 5px;
-  padding: 0.4rem 0.6rem;
-  z-index: 100;
-  cursor: pointer;
+  box-shadow: none;
 }
 
 @media (max-width: 768px) {
-  #nav-toggle {
-    display: block;
-  }
-
   nav ul {
-    display: none;
-    flex-direction: column;
-    background-color: #fffdf9;
-    padding: 1rem;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    border: 1px solid #e4d6c9;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  }
-
-  nav ul.show-nav {
-    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
   }
 }
+
 
 /* Hero Section */
 #hero {
