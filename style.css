@@ -487,3 +487,11 @@ body.dark .edu-note {
     cursor: auto !important;
   }
 }
+
+/* Mobile nav fix: scrollable menu */
+@media (max-width: 768px) {
+  nav ul.mobile-nav {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+}
