@@ -465,3 +465,14 @@ body.dark .edu-block {
 body.dark .edu-note {
   color: #cdb8a4;
 }
+
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
+
+  * {
+    cursor: auto !important;
+  }
+}
+
