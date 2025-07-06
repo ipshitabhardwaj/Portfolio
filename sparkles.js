@@ -1,4 +1,3 @@
-// ✨ Sparkle trail on cursor
 document.addEventListener("mousemove", (e) => {
   const sparkle = document.createElement("div");
   sparkle.className = "sparkle";
@@ -8,18 +7,18 @@ document.addEventListener("mousemove", (e) => {
   setTimeout(() => sparkle.remove(), 1000);
 });
 
-// 🖱 Create the custom heart cursor
+//Heart cursor
 const cursor = document.createElement("div");
 cursor.className = "custom-cursor";
 document.body.appendChild(cursor);
 
-// 📍 Make the cursor follow the mouse
+//Cursor follows mouse
 document.addEventListener("mousemove", (e) => {
   cursor.style.left = e.clientX + "px";
   cursor.style.top = e.clientY + "px";
 });
 
-// 🌗 Theme toggle button logic
+// Theme toggle
 const toggleBtn = document.getElementById("theme-toggle");
 toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
@@ -27,8 +26,18 @@ toggleBtn.addEventListener("click", () => {
   updateCursor();
 });
 
-// 🌙 Load theme + fade-in effect + quote
+//Mobile nav toggle
+const navToggle = document.getElementById("nav-toggle");
+const navList = document.querySelector("nav ul");
+if (navToggle && navList) {
+  navToggle.addEventListener("click", () => {
+    navList.classList.toggle("show-nav");
+  });
+}
+
+// DOMContentLoaded logic
 window.addEventListener("DOMContentLoaded", () => {
+  // Apply saved theme
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark");
   }
@@ -40,7 +49,7 @@ window.addEventListener("DOMContentLoaded", () => {
     preloader.style.pointerEvents = "none";
   }, 1200);
 
-  // Scroll reveal
+  //Section scroll animation
   const sections = document.querySelectorAll("section");
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -55,16 +64,15 @@ window.addEventListener("DOMContentLoaded", () => {
     observer.observe(section);
   });
 
-  // Init quote
+  // Load first quote
   updateQuote();
 
-  // Init cursor style
+  //Cursor emoji
   updateCursor();
 });
 
-// 🔼 Scroll-to-top functionality
+//Scroll-to-top button
 const scrollBtn = document.getElementById("scrollToTop");
-
 window.addEventListener("scroll", () => {
   if (window.scrollY > 400) {
     scrollBtn.classList.add("show");
@@ -72,12 +80,11 @@ window.addEventListener("scroll", () => {
     scrollBtn.classList.remove("show");
   }
 });
-
 scrollBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// 💬 Quote logic
+// Quotes
 const quotes = [
   "“you are not behind — you are on your own path.”",
   "“even soft things can be strong.”",
@@ -100,18 +107,7 @@ document.getElementById("next-quote").addEventListener("click", () => {
   updateQuote();
 });
 
-// ❤️ Update cursor emoji depending on theme
+  // Cursor emoji on themes
 function updateCursor() {
-  if (document.body.classList.contains("dark")) {
-    cursor.textContent = "🤍";
-  } else {
-    cursor.textContent = "🤎";
-  }
+  cursor.textContent = document.body.classList.contains("dark") ? "🤍" : "🤎";
 }
-// 🍔 Mobile nav toggle logic
-const navToggle = document.getElementById("nav-toggle");
-const navList = document.querySelector("nav ul");
-
-navToggle.addEventListener("click", () => {
-  navList.classList.toggle("show-nav");
-});
