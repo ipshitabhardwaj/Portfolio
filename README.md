@@ -1,4 +1,4 @@
-# 🤎 Ipshita Bhardwaj — Cozy Portfolio
+# 🤎 Ipshita Bhardwaj —Portfolio
 
 Welcome to my cozy little corner of the internet ✨  
 This portfolio is a soft space where I showcase the projects I'm working on, the things I'm learning, and the warmth I want to bring to tech.
