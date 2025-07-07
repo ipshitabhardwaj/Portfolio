@@ -385,19 +385,24 @@ body.dark {
   background-color: #2e2721;
   color: #f6eee4;
 }
+
 body.dark a {
   color: #f4d7ba;
 }
+
 body.dark nav ul li a {
   color: #f4d7ba;
 }
+
 body.dark nav ul li a:hover::after {
   background-color: #f4d7ba;
 }
+
 body.dark .project-card {
   background: #3b312a;
   border-color: #5c4a3d;
 }
+
 body.dark .project-card p,
 body.dark .edu-block p,
 body.dark .quote-box p,
@@ -406,67 +411,116 @@ body.dark #next-quote,
 body.dark .resume-button {
   color: #f1e5d6 !important;
 }
+
 body.dark .resume-button {
   background-color: #3b312a;
   border-color: #6e5849;
 }
+
 body.dark .resume-button:hover {
   background-color: #4e3d30;
 }
+
 body.dark #theme-toggle {
   background: #4a3b33;
   color: #f6eee4;
 }
+
 body.dark #preloader {
   background: #2e2721;
 }
+
 body.dark .divider {
   background-color: #4e3d30;
 }
+
 body.dark .divider span {
   background-color: #2e2721;
 }
+
 body.dark .filter-btn {
   color: #f4d7ba;
   background-color: #3b312a;
   border-color: #6b5545;
 }
+
 body.dark .filter-btn.active {
   background-color: #5c4a3d;
 }
+
 body.dark .filter-btn:hover {
   background-color: #6e5849;
 }
+
 body.dark #next-quote {
   background-color: #3b312a;
   color: #f1e5d6;
 }
+
 body.dark #next-quote:hover {
   background-color: #574539;
 }
+
 body.dark #scrollToTop {
   background-color: #4e3d30;
   color: #f6eee4;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
-body.dark #hero p {
-  color: #f1e5d6;
-}
 
 body.dark #hero {
   background: linear-gradient(180deg, #2e2721 0%, #3b312a 100%);
 }
+
+body.dark #hero p {
+  color: #f1e5d6;
+}
+
 body.dark .edu-block {
   background-color: #3b312a;
   border-color: #5c4a3d;
 }
+
 body.dark .edu-note {
   color: #cdb8a4;
 }
+
+/* ✨ NEW — Lightened Section Headings for Dark Mode */
+body.dark section h2 {
+  color: #f8e6d6;
+}
+
+/* Optional: other headings */
+body.dark .edu-block h3,
+body.dark .project-card h3,
+body.dark .blog-card a {
+  color: #f4d7ba;
+}
+
+body.dark .blog-card {
+  background-color: #3b312a;
+  border-color: #5c4a3d;
+}
+
+body.dark .blog-card a {
+  color: #f4d7ba;
+}
+
+body.dark .skill-pill {
+  background-color: #3b312a;
+  color: #f4d7ba;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
 @media (max-width: 768px) {
   .custom-cursor {
     display: none;
   }
+
+  * {
+    cursor: auto !important;
+  }
+}
+
 
   * {
     cursor: auto !important;
