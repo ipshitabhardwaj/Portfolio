@@ -541,3 +541,18 @@ body.dark .blog-card {
 body.dark .blog-card a {
   color: #f4d7ba;
 }
+.avatar-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+.avatar-img:hover {
+  transform: scale(1.05);
+}
+body.dark .avatar-img {
+  border: 2px solid #5c4a3d;
+}
