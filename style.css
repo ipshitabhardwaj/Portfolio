@@ -672,36 +672,24 @@ body.dark .avatar-img {
 }
 
 body.dark #achievements {
+  background-color: #1c1c1c;  /* cozy dark background */
   color: #f0f0f0;
 }
 
 body.dark #achievements a {
-  color: #f9f9f9;
+  color: #add8e6;
   text-decoration: underline;
 }
 
 body.dark #achievements a:hover {
-  color: #ffd6a5; /* optional soft highlight on hover */
+  color: #ffd6a5;
 }
 
+body.dark #achievements h2,
 body.dark #achievements h3 {
   color: #ffffff;
 }
 
 body.dark #achievements li {
   color: #e6e6e6;
-}
-
-body.dark-mode #achievements {
-  background-color: #1c1c1c;  /* darker cozy shade */
-  color: #f0f0f0;             /* brighter text for contrast */
-}
-
-body.dark-mode #achievements a {
-  color: #add8e6; /* soft blue for links in dark mode */
-}
-
-body.dark-mode #achievements h2,
-body.dark-mode #achievements h3 {
-  color: #ffffff; /* ensure headings are visible */
 }
